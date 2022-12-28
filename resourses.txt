@@ -1,0 +1,6 @@
+https://golangbyexample.com/interface-in-golang/
+https://stepik.org/course/54403/syllabus?auth=login
+https://go.dev/doc/tutorial/database-access
+https://golangify.com/map#freq
+https://metanit.com/
+https://www.geeksforgeeks.org/

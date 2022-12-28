@@ -1,0 +1,1 @@
+1) try to realise go-like interfaces in C

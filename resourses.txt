@@ -4,3 +4,4 @@ https://go.dev/doc/tutorial/database-access
 https://golangify.com/map#freq
 https://metanit.com/
 https://www.geeksforgeeks.org/
+https://www.youtube.com/watch?v=LvgVSSpwND8

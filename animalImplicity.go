@@ -1,3 +1,5 @@
+//https://golangbyexample.com/interface-in-golang/
+
 package main
 
 import "fmt"

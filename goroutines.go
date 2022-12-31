@@ -1,3 +1,5 @@
+//U should NEVER close a channel where u r recieving data...
+
 package main
 
 import (
@@ -28,12 +30,12 @@ func main() {
 }
 
 func count(word string, out chan string) {
+	defer close(out)
+	
 	for i := 0; i < 5; i++ {
 		NewI := strconv.Itoa(i)
 		NewI += word
 		time.Sleep(time.Millisecond * 500)
 		out <- NewI
 	}
-
-	close(out)
 }

@@ -29,7 +29,7 @@ func main() {
 	}
 }
 
-func count(word string, out chan string) {
+func count(word string, out chan<- string) {
 	defer close(out)
 	
 	for i := 0; i < 5; i++ {

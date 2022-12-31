@@ -19,7 +19,7 @@ func main() {
 	go func() {
 		for {
 			time.Sleep(time.Millisecond * 2500)
-			out1 <- "BB: doing cluster"
+			out2 <- "BB: doing cluster"
 		}
 	}()
 

@@ -3,16 +3,37 @@ package main
 import (
 	"fmt"
 	"time"
+	"strconv"
 )
 
 func main() {
-	go count("FISH")
-	count("sheep")
+	outer1 := make(chan string)
+	outer2 := make(chan string)
+
+	go count("FISH", outer1)
+	go count("sheep", outer2)
+
+	for {
+		messege, opened1 := <- outer1
+		messege += " "
+		msg, opened2 := <- outer2
+		messege += msg
+
+		if !(opened1 || opened2) {
+			break
+		}
+
+		fmt.Println(messege)
+	}
 }
 
-func count(word string) {
-	for i := 0; true; i++ {
-		fmt.Println(i, word)
+func count(word string, out chan string) {
+	for i := 0; i < 5; i++ {
+		NewI := strconv.Itoa(i)
+		NewI += word
 		time.Sleep(time.Millisecond * 500)
+		out <- NewI
 	}
+
+	close(out)
 }

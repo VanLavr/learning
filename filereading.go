@@ -41,7 +41,7 @@ func WriteBytes(filename string, data []byte) {
 		return
 	}
 
-	fmt.Printf("Wrote %d bytes...", size)
+	fmt.Printf("Wrote %d bytes...\n", size)
 }
 
 func ReadByLines(filename string) string {
@@ -82,6 +82,13 @@ func main() {
 	fmt.Println(a)
 	fmt.Println()
 
-	s := []byte{1, 2, 3, 4, 5, 6, 7, 9}
-	WriteBytes("example3", s)
+	s1 := []byte("hi ama byte line")
+	WriteBytes("example3", s1)
+	s2 := []byte{1, 2, 3, 4, 5, 6, 7, 8, 9}
+	WriteBytes("example4", s2)
+
+	a = ReadAllInfo("example3")
+	fmt.Println(a)
+	a = ReadAllInfo("example4")
+	fmt.Println(a)
 }

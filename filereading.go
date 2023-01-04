@@ -61,6 +61,12 @@ func ReadByLines(filename string) string {
 	return ret
 }
 
+func WriteNewInfo(args string, path string, filename string) {
+	priviousInfo := ReadAllInfo(filename)
+	priviousInfo += args
+	WriteStringInfo(priviousInfo, path)
+}
+
 func main() {
 	// reading all
 	a := ReadAllInfo("example1.txt")
@@ -91,4 +97,7 @@ func main() {
 	fmt.Println(a)
 	a = ReadAllInfo("example4")
 	fmt.Println(a)
+
+	NewInfo := "\nnew info"
+	WriteNewInfo(NewInfo, path, "example2.txt")
 }

@@ -9,5 +9,6 @@ https://www.youtube.com/@DonaldFeury/videos
 https://www.youtube.com/watch?v=8uKtaYJlTzs
 https://www.youtube.com/watch?v=y4wyZCxLKac
 https://golang-blog.blogspot.com/2020/01/map-golang.html
+https://habr.com/ru/post/415171/
 
 ********** go env -w GO111MODULE=off ***********

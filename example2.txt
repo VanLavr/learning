@@ -1,0 +1,2 @@
+Wrote this info in example2.txt
+new info

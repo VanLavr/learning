@@ -10,5 +10,8 @@ https://www.youtube.com/watch?v=8uKtaYJlTzs
 https://www.youtube.com/watch?v=y4wyZCxLKac
 https://golang-blog.blogspot.com/2020/01/map-golang.html
 https://habr.com/ru/post/415171/
+https://medium.com/nuances-of-programming/основы-go-ввод-вывод-файловой-системы-c2641862f78b
+https://www.codeflow.site/ru/article/understanding-arrays-and-slices-in-go
+https://www.youtube.com/watch?v=vdm04bVzkLg
 
 ********** go env -w GO111MODULE=off ***********

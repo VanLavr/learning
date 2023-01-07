@@ -9,6 +9,28 @@ func logger(prf string) (func (messege string)) {
 }
 
 func main() {
-	warning := logger("WARNING")
-	warning("Incorrect sexual otientation...")
+	//warning := logger("WARNING")
+	//warning("Incorrect sexual otientation...")
+
+
+	/*
+	y := func(a int) int {
+		return a * -1
+	}
+
+	func(b int, retfunc func(a int) int) {
+		fmt.Println(retfunc(b))
+	}(5, y)
+	*/
+
+
+	x := func(b int, retfunc func(a int) int) {
+		fmt.Println(retfunc(b))
+	}
+
+	y := func(a int) int {
+		return a * -1
+	}
+
+	x(5, y)
 }

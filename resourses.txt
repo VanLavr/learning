@@ -18,3 +18,4 @@ https://habr.com/ru/post/215117/
 https://habr.com/ru/post/485618/
 
 ********** go env -w GO111MODULE=off ***********
+ИСХОДНЫЙ GOPATH: C:\Users\Ivan\go

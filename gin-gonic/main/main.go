@@ -1,14 +1,16 @@
 package main
 
 import (
-	"net/http"
+	"fmt"
+	"my.api.my/api"
 	"github.com/gin-gonic/gin"
-	"MyWebService/RequestHandlers"
 )
 
 func main() {
+	fmt.Println("Hi!")
+	fmt.Println(api.Greet())
+
 	router := gin.Default()
-	router.GET("/albums", RequestsHandlers.GetAlbums)
-	
+	router.GET("/albums", api.GetAlbums)
 	router.Run("localhost:8080")
 }

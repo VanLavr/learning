@@ -1,4 +1,4 @@
-module MyWebService
+module my.api.my
 
 go 1.19
 

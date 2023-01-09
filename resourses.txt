@@ -13,5 +13,8 @@ https://habr.com/ru/post/415171/
 https://medium.com/nuances-of-programming/основы-go-ввод-вывод-файловой-системы-c2641862f78b
 https://www.codeflow.site/ru/article/understanding-arrays-and-slices-in-go
 https://www.youtube.com/watch?v=vdm04bVzkLg
+https://www.youtube.com/watch?v=U5Y_St7lESk
+https://habr.com/ru/post/215117/
+https://habr.com/ru/post/485618/
 
 ********** go env -w GO111MODULE=off ***********

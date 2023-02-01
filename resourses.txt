@@ -18,6 +18,7 @@ https://habr.com/ru/post/215117/
 https://habr.com/ru/post/485618/
 https://vc.ru/dev/155069-10-komand-curl-kotorye-vam-sleduet-znat
 https://support.zendesk.com/hc/en-us/articles/4408819734426-API-error-curl-3-URL-using-bad-illegal-format-or-missing-URL
+https://www.youtube.com/watch?v=0bL_Va_4lB4&list=PLBOPkQsFLCR2DWRY74L03FmbRtz_Yy73_
 
 ********** go env -w GO111MODULE=off ***********
 ИСХОДНЫЙ GOPATH: C:\Users\Ivan\go

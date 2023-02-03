@@ -1,6 +1,7 @@
 
 // screen[i * width + j] = pixel // filling full screen
 #include <stdio.h>
+#include <math.h>
 
 int main(int argc, char const *argv[]) {
 
@@ -25,6 +26,9 @@ int main(int argc, char const *argv[]) {
 				float x = 2 * ( ( (float)j / (float)width ) - 0.5f ); // normalizing width (from -1 to 1)
 				float y = 2 * ( ( (float)i / (float)height ) - 0.5f ); // normalizing height (from -1 to 1)
 				x *= borderRelation * symbolFrameRelation; // x and y coordinates in consider with screen and symbol border relations
+                x += sin( (k * 0.01) - 0.5 );
+                y += sin( (k * 0.015) - 0.85 );
+
 
 				if ( (x * x + y * y) < 0.5 ) pixel = '@';
 

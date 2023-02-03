@@ -5,6 +5,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 )
 
 
@@ -30,6 +31,7 @@ func main() {
 				var x float64 = 2 * ( ( float64(j) / float64(width) ) - 0.5 ) // normalizing width (from -1 to 1)
 				var y float64 = 2 * ( ( float64(i) / float64(height) ) - 0.5 ) // normalizing height (from -1 to 1)
 				x *= borderRelation * symbolFrameRelation // x and y coordinates in consider with screen and symbol border relations
+				x += math.Sin(float64(k) * 0.1)
 
 
 				if ( (x * x + y * y) < 0.5 ) {

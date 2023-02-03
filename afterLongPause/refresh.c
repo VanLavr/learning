@@ -17,8 +17,7 @@ void SomePrint();
 typedef void (*PrintPointer)();
 
 // than structs, that uses functions
-typedef struct
-{
+typedef struct {
     int a;
     PrintPointer pp;
 } SomeStruct;

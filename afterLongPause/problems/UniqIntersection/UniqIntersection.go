@@ -32,18 +32,22 @@ func UniqIntersection(array1 []int, array2 []int) (resultArray []int) {
 }
 
 func DeleteDuplicate(array []int) []int {
-	var bufferArray = array
-	var duplicateIndexes []int
+	var set []int
 
 	for i := 0; i < len(array); i++ {
+		var inputCounter int
 		for j := 0; j < len(array); j++ {
-			if bufferArray[i] == bufferArray[j] && i != j {
-				duplicateIndexes = append(duplicateIndexes, i)
+			if array[i] != array[j] && i != j {
+				inputCounter++
+			}
+
+			if inputCounter == len(array) - 1 {
+				set = append(set, array[i])
 			}
 		}
 	}
 
-	
 
-	return array
+
+	return set
 }

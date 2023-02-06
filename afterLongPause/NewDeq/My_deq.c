@@ -32,6 +32,7 @@ int* CreateDequeue(int capacity) {
     return deq;
 }
 
+// passed 2 of 3 tests
 void AddToRight(int element, int* deq, int* capacity) {
     
     deq = realloc( deq, sizeof(int) * (*capacity + 1) );

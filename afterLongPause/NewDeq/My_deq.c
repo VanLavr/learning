@@ -15,7 +15,6 @@ typedef int* (*ptr_CreateDequeue)(int);
 typedef struct {
     
     int  capacity;
-    //int* deq;
 
     ptr_AddToRight      addRight;
     ptr_AddToLeft       addLeft;
@@ -45,7 +44,7 @@ void AddToLeft(int element, int* deq, int* capacity) {
 
     int* tmp = malloc(sizeof(int) * (*capacity + 1));
     for (int i = 0; i < *capacity; ++i) {
-        tmp[i + i] = deq[i];
+        tmp[i + 1] = deq[i];
     }
     tmp[0] = element;
 
@@ -57,4 +56,35 @@ void AddToLeft(int element, int* deq, int* capacity) {
 
     free(tmp);
 
+}
+
+int DeleteFromRight(int* deq, int* capacity) {
+    
+    int index = *capacity;
+    int returnedElement = deq[index - 1];
+
+    deq = realloc( deq, sizeof(int) * (*capacity - 1) );
+    *capacity = *capacity - 1;
+    
+    return returnedElement;
+}
+
+int  DeleteFromLeft(int* deq, int* capacity) {
+
+    int returnedElement = deq[0];
+
+    int* tmp = malloc(sizeof(int) * (*capacity - 1));
+    for (int i = 1; i < *capacity; ++i) {
+        tmp[i - 1] = deq[i];
+    }
+
+    deq = realloc( deq, sizeof(int) * (*capacity - 1) );
+    *capacity = *capacity - 1;
+    for (int i = 0; i < *capacity; ++i) {
+        deq[i] = tmp[i];
+    }
+
+    free(tmp);
+
+    return returnedElement;
 }

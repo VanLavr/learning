@@ -1,7 +1,12 @@
+// if ( (x * x + y * y) < 0.5 ) pixel = '@'; circle
+// if ( x <= 0.25 && x >= -0.25 && y <= 0.25 && y >= -0.25 ) pixel = '@'; square
+// if ( y <= 1.6 * x + 0.7 && y >= 0.27 && y <= -1.6 * x + 0.7 && x <= 0.25 && x >= -0.25 ) pixel = '@'; triangle
+
 
 // screen[i * width + j] = pixel // filling full screen
 #include <stdio.h>
 #include <math.h>
+#include <Windows.h>
 
 int main(int argc, char const *argv[]) {
 
@@ -30,7 +35,8 @@ int main(int argc, char const *argv[]) {
                 y += sin( (k * 0.015) - 0.85 );
 
 
-				if ( (x * x + y * y) < 0.5 ) pixel = '@';
+				if ( y <= 1.6 * x + 0.7 && y >= 0.27 && y <= -1.6 * x + 0.7 && x <= 0.25 && x >= -0.25 ) pixel = '@'; // place the figure here (first lines)
+
 
 				screen[i * width + j] = pixel;
 			}
@@ -38,6 +44,8 @@ int main(int argc, char const *argv[]) {
 
         printf(screen);
 
+
+        Sleep(3);
 	}
 
     return 0;

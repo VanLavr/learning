@@ -6,6 +6,7 @@ package main
 import (
 	"fmt"
 	"math"
+	"time"
 )
 
 
@@ -43,6 +44,8 @@ func main() {
 		}
 
 		PrintScreen(screen)
+
+		time.Sleep(time.Millisecond * 30)
 
 	}
 

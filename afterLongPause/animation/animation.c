@@ -34,9 +34,10 @@ int main(int argc, char const *argv[]) {
                 x += sin( (k * 0.01) - 0.5 );
                 y += sin( (k * 0.015) - 0.85 );
 
+                //y /= sin( (k * 0.01) - 0.5 );
+                x /= sin( (k * 0.015) - 0.85 );
 
-				if ( y <= 1.6 * x + 0.7 && y >= 0.27 && y <= -1.6 * x + 0.7 && x <= 0.25 && x >= -0.25 ) pixel = '@'; // place the figure here (first lines)
-
+                if ( x <= 0.25 && x >= -0.25 && y <= 0.25 && y >= -0.25 ) pixel = '@';
 
 				screen[i * width + j] = pixel;
 			}
